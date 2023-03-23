@@ -1,5 +1,5 @@
 {% set name = "felyx-processor" %}
-{% set version = "2.4.4" %}
+{% set version = "2.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,17 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/felyx/felyx_processor/-/archive/{{ version }}/felyx_processor-{{ version }}.tar.gz
-  sha256: 34350f938fcc47a246048532adace1dc5dea79be50e0159134091aa422a16762
+  sha256: 37032e547b339d3cf2d455ce42176d81c04729c2b5501d884cea1f673019011e
 
 build:
   script_env:
-   - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
-  script: 
-  - GIT_LFS_SKIP_SMUDGE=1
-  - {{ PYTHON }} -m pip install . -vv
+    - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
+  script:
+    - GIT_LFS_SKIP_SMUDGE=1
+    - {{ PYTHON }} -m pip install . -vv
   number: 0
   noarch: python
-  entry_points: 
+  entry_points:
     - felyx-extraction = felyx_processor.main.miniprod:felyx_miniprod
     - felyx-install = felyx_processor.main.install:main
     - felyx-assemble = felyx_processor.main.matchups:assemble_matchups
@@ -59,7 +59,7 @@ requirements:
     - xarray >=2022.3.0,!=2022.6.0,<2022.10.0
     - packaging >=20.4,<21.0
     - cerbere
-    
+
 test:
   imports:
     - felyx_processor
@@ -68,7 +68,8 @@ about:
   home: https://gitlab.ifremer.fr/felyx/felyx_processor
   license: LGPL-3.0-only
   license_file: LICENSE
-  summary: felyx is a free software solution, written in python, whose aim is to provide Earth Observation data producers and users with an open-source, flexible and reusable tool to allow scientific analysis and performance monitoring of scientific observation data through subsetting over specific areas or matching up with in situ measurements.
+  summary: felyx is a free software solution, written in python, whose aim is to provide Earth Observation data producers and users with an open-source, flexible and reusable tool to allow scientific analysis and performance monitoring of scientific observation data through subsetting over specific areas or matching up with
+    in situ measurements.
 
 extra:
   recipe-maintainers:
