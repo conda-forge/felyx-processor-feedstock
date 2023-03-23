@@ -1,11 +1,11 @@
-About felyx-processor
-=====================
+About felyx-processor-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/felyx-processor-feedstock/blob/main/LICENSE.txt)
 
 Home: https://gitlab.ifremer.fr/felyx/felyx_processor
 
 Package license: LGPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/felyx-processor-feedstock/blob/main/LICENSE.txt)
 
 Summary: felyx is a free software solution, written in python, whose aim is to provide Earth Observation data producers and users with an open-source, flexible and reusable tool to allow scientific analysis and performance monitoring of scientific observation data through subsetting over specific areas or matching up with in situ measurements.
 
