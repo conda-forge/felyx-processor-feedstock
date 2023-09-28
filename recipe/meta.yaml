@@ -1,5 +1,5 @@
 {% set name = "felyx-processor" %}
-{% set version = "2.4.4" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/felyx/felyx_processor/-/archive/{{ version }}/felyx_processor-{{ version }}.tar.gz
-  sha256: 34350f938fcc47a246048532adace1dc5dea79be50e0159134091aa422a16762
+  sha256: c9531e239423e2410ceb2c11b5065ebf56895c999cbc23bebc5fa7609122b1ec
 
 build:
   script_env:
