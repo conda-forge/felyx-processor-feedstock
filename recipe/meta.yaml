@@ -15,7 +15,7 @@ build:
   script: 
   - GIT_LFS_SKIP_SMUDGE=1
   - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
   entry_points: 
     - felyx-extraction = felyx_processor.main.miniprod:felyx_miniprod
@@ -52,7 +52,7 @@ requirements:
     - pyyaml >=6.0.0,<7.0.0
     - requests >=2.26.0,<2.27
     - scipy >=1.5.3,<1.6
-    - shapely >=1.7.1,<1.8
+    - shapely >=1.8.1,<2.0.0
     - simplejson >=3.17.2,<3.18
     - pyinterp >=0.16.0,<0.17
     - polygon-geohasher >=0.0.1,<0.1
