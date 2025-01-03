@@ -15,7 +15,7 @@ build:
   script: 
   - GIT_LFS_SKIP_SMUDGE=1
   - {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
   noarch: python
   entry_points: 
     - felyx-extraction = felyx_processor.main.miniprod:felyx_miniprod
@@ -37,13 +37,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - poetry-core
     - poetry-dynamic-versioning
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - dask >=2021.8.1,<2021.8.2
     - elasticsearch >=7.10.1,<7.11
     - numexpr >=2.7.1,<2.8
@@ -61,6 +61,8 @@ requirements:
     - cerbere
     
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - felyx_processor
 
