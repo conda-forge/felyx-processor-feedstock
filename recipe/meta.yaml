@@ -42,21 +42,21 @@ requirements:
     - poetry-dynamic-versioning
 
   run:
-      - python>=3.10,<3.11
-      - pip
-      - Cython==3.0.11
-      - elasticsearch==7.17.0
-      - numexpr==2.10.2
-      - pyarrow>=17.0,<18.0
-      - pydantic==2.9.1
-      - pyresample==1.31.0
-      - pyyaml==6.0.2
-      - requests>=2.32.3
-      - scipy==1.14.1
-      - shapely==2.0.6
-      - simplejson==3.19.3
-      - pyinterp==2024.11.0
-      - polygon-geohasher==0.0.1
+    - python>=3.10,<3.11
+    - pip
+    - Cython==3.0.11
+    - elasticsearch==7.17.0
+    - numexpr==2.10.2
+    - pyarrow>=17.0,<18.0
+    - pydantic==2.9.1
+    - pyresample==1.31.0
+    - pyyaml==6.0.2
+    - requests>=2.32.3
+    - scipy==1.14.1
+    - shapely==2.0.6
+    - simplejson==3.19.3
+    - pyinterp==2024.11.0
+    - polygon-geohasher==0.0.1
 
 test:
   imports:
