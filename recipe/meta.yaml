@@ -1,5 +1,5 @@
 {% set name = "felyx-processor" %}
-{% set version = "2.5.4" %}
+{% set version = "2.5.8" %}
 
 package:
   name: {{ name|lower }}
@@ -31,34 +31,32 @@ build:
     - felyx-get-coverage = felyx_processor.main.get_coverage:felyx_get_coverage
     - felyx-import-parquet-insitu = felyx_processor.main.import_parquet_insitu:felyx_import_parquet_insitu
     - felyx-get-metrics = felyx_processor.main.get_metrics:felyx_get_metrics
-    - felyx-mmdb = felyx_processor.main.run_mmdb:felyx_mmdb
     - felyx-collect-eo-files = felyx_processor.main.collect_eo_files:felyx_collect_eo_files
 
 
 requirements:
   host:
-    - python >=3.8
+    - python>=3.10,<3.11
     - pip
     - poetry-core
     - poetry-dynamic-versioning
 
   run:
-    - python >=3.8
-    - dask >=2021.8.1,<2021.8.2
-    - elasticsearch >=7.10.1,<7.11
-    - numexpr >=2.7.1,<2.8
-    - pyarrow >=9.0.0,<9.1
-    - pydantic >=1.8.2,<1.9
-    - pyyaml >=6.0.0,<7.0.0
-    - requests >=2.26.0,<2.27
-    - scipy >=1.5.3,<1.6
-    - shapely >=1.8.1,<2.0.0
-    - simplejson >=3.17.2,<3.18
-    - pyinterp >=0.16.0,<0.17
-    - polygon-geohasher >=0.0.1,<0.1
-    - xarray >=2022.3.0,!=2022.6.0,<2022.10.0
-    - packaging >=20.4,<21.0
-    - cerbere
+      - python>=3.10,<3.11
+      - pip
+      - Cython==3.0.11
+      - elasticsearch==7.17.0
+      - numexpr==2.10.2
+      - pyarrow>=17.0,<18.0
+      - pydantic==2.9.1
+      - pyresample==1.31.0
+      - pyyaml==6.0.2
+      - requests>=2.32.3
+      - scipy==1.14.1
+      - shapely==2.0.6
+      - simplejson==3.19.3
+      - pyinterp==2024.11.0
+      - polygon-geohasher==0.0.1
 
 test:
   imports:
