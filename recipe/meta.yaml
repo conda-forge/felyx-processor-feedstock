@@ -15,7 +15,7 @@ build:
   script: 
   - GIT_LFS_SKIP_SMUDGE=1
   - {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
   noarch: python
   entry_points:
     - felyx-extraction = felyx_processor.main.miniprod:felyx_miniprod
@@ -47,7 +47,6 @@ requirements:
     - cerbere >=3.1.2,<4.0.0
     - cerberecontrib-ghrsst >=3.1.2,<4.0.0
     - cerberecontrib-s3 >=3.1.2,<4.0.0
-    - Cython ==3.0.11
     - elasticsearch ==7.17.0
     - numexpr ==2.10.2 
     - pyarrow >=17.0,<18.0
@@ -58,12 +57,9 @@ requirements:
     - requests >=2.32.3
     - scipy ==1.14.1
     - shapely ==2.0.6
-    - simplejson ==3.19.3
-    - pyinterp ==2024.11.0
     - polygon-geohasher >=0.0.1,<0.1
-    - xarray >=2022.3.0,!=2022.6.0,<2022.10.0
-    - packaging >=20.4,<21.0
-    
+    - xarray >=2024.10.0
+
 test:
   requires:
     - python {{ python_min }}
