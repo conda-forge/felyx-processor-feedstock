@@ -1,5 +1,5 @@
 {% set name = "felyx-processor" %}
-{% set version = "2.5.0" %}
+{% set version = "2.5.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/felyx/felyx_processor/-/archive/{{ version }}/felyx_processor-{{ version }}.tar.gz
-  sha256: c9531e239423e2410ceb2c11b5065ebf56895c999cbc23bebc5fa7609122b1ec
+  sha256: 977e50ed95c2e519b2ea9ed0cf03a0a9eb9e6f82c4591be2ef60a5336375fbbc
 
 build:
   script_env:
@@ -17,7 +17,7 @@ build:
   - {{ PYTHON }} -m pip install . -vv
   number: 2
   noarch: python
-  entry_points: 
+  entry_points:
     - felyx-extraction = felyx_processor.main.miniprod:felyx_miniprod
     - felyx-install = felyx_processor.main.install:main
     - felyx-assemble = felyx_processor.main.matchups:assemble_matchups
@@ -31,7 +31,6 @@ build:
     - felyx-get-coverage = felyx_processor.main.get_coverage:felyx_get_coverage
     - felyx-import-parquet-insitu = felyx_processor.main.import_parquet_insitu:felyx_import_parquet_insitu
     - felyx-get-metrics = felyx_processor.main.get_metrics:felyx_get_metrics
-    - felyx-mmdb = felyx_processor.main.run_mmdb:felyx_mmdb
     - felyx-collect-eo-files = felyx_processor.main.collect_eo_files:felyx_collect_eo_files
 
 
@@ -74,4 +73,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - criou-cg
+    - cso2943
+    - erwanbodere
     - marie59
