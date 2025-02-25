@@ -15,7 +15,7 @@ build:
   script: 
   - GIT_LFS_SKIP_SMUDGE=1
   - {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 4
   noarch: python
   entry_points:
     - felyx-extraction = felyx_processor.main.miniprod:felyx_miniprod
@@ -48,6 +48,7 @@ requirements:
     - cerberecontrib-ghrsst >=3.1.2,<4.0.0
     - cerberecontrib-s3 >=3.1.2,<4.0.0
     - elasticsearch ==7.17.0
+    - felyxcontribs_metrics_base >=1.0.3,<2.0.0
     - numexpr ==2.10.2 
     - pyarrow >=17.0,<18.0
     - pydantic ==2.9.1
@@ -58,6 +59,7 @@ requirements:
     - scipy ==1.14.1
     - shapely ==2.0.6
     - polygon-geohasher >=0.0.1,<0.1
+    - pyinterp ==2024.11.0
     - xarray >=2024.10.0
 
 test:
@@ -77,4 +79,5 @@ extra:
     - criou-cg
     - cso2943
     - erwanbodere
-    - marie59
+    - Marie59
+    - jfpiolle
